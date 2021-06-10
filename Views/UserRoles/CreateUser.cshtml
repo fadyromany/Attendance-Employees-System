@@ -1,0 +1,22 @@
+﻿
+@*@model Attendance_Employees_System.Controllers.UserRolesController;*@
+@model Attendance_Employees_System.Services.ToMailDTO;
+@{
+    ViewData["Title"] = "Add User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Add User</h1>
+<form method="post" asp-action="CreateUser" asp-controller="UserRoles">
+    
+    <div class="form-group col-4">
+        <label asp-for="@Model.Mail"> Email</label>
+        <input class="form-control m-2" asp-for="@Model.Mail" />
+        <input type="submit">
+
+        
+       @* <a class="btn btn-danger" asp-action="CreateUser" asp-controller="UserRoles" asp-route-userId="@Model.Email">Create User</a>*@
+
+
+    </div>
+</form>
+
